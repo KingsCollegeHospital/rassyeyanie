@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
+    xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+                           http://www.springframework.org/schema/osgi-compendium http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                           http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+    <bean class="uk.nhs.kch.rassyeyanie.framework.route.GenericTransformRoute">
+        <property name="routeName" value="a31-apas-a31" />
+        <property name="processors">
+            <list>
+                <bean class="uk.nhs.kch.rassyeyanie.rules.pims.apas.translations.a31.ApasA31PimsA31" />
+                
+            </list>
+        </property>
+        <property name="identifiers">
+            <list>
+                <bean
+                    class="uk.nhs.kch.rassyeyanie.framework.processor.MessageIdentifierImpl">
+                    <property name="sendingApplicationFilterList"
+                        value="APAS" />
+                    <property name="sendingFacilityFilterList"
+                        value="NCR" />
+                    <property name="triggerEventFilterList"
+                        value="A31" />
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>

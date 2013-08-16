@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
+    xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+                           http://www.springframework.org/schema/osgi-compendium http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                           http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+    <bean class="uk.nhs.kch.rassyeyanie.framework.route.GenericTransformRoute">
+        <property name="routeName" value="a02-symphony-a03" />
+        <property name="processors">
+            <list>
+                <bean class="uk.nhs.kch.rassyeyanie.rules.pims.symphony.translations.a03.SymA03PimsA02" />
+                <ref bean="commonSymphonyPimsProcessor" />
+            </list>
+        </property>
+        <property name="identifiers">
+            <list>
+                <bean
+                    class="uk.nhs.kch.rassyeyanie.framework.processor.MessageIdentifierImpl">
+                    <property name="sendingApplicationFilterList"
+                        value="HL7_AE" />
+                    <property name="sendingFacilityFilterList"
+                        value="SYMPHONY" />
+                    <property name="triggerEventFilterList"
+                        value="A03" />
+                    <property name="messageTypeFilterList"
+                        value="ADT" />
+                </bean>
+                
+                 <bean class="uk.nhs.kch.rassyeyanie.rules.common.core.filters.AssignedPatientLocationFilter" >
+                    <property name="values" value="CDU.*" />                    	
+                 </bean>
+                 
+                 <bean class="uk.nhs.kch.rassyeyanie.rules.common.core.filters.DischargeDisposition" >
+                    <property name="values" value="10" />                    	
+                 </bean>                  
+                 
+                 
+                
+            </list>
+        </property>
+    </bean>
+</beans>    

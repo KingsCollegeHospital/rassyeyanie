@@ -1,0 +1,212 @@
+MSH|^~\&|LBM|SCM|LBM||20130314093737||ORU^R01|MIDAS_683828|P|2.3|
+PID|||V122270^^^PAS Number||LYNCH^Bobby|||||||||||||V1404507^^^visit number|
+ORC|XO|001JLQNRT^PCS|||SC|
+OBR||001JLQNRT^PCS||TACROMS^^Lab_MIDAS|||||||||||||||||||||I
+NTE|||Specimen Received IDM|
+>
+
+MSH|^~\&|LBM|SCM|LBM||20130314093636||ORU^R01|MIDAS_683827|P|2.3|
+PID|||F069837^^^PAS Number||RAHMAN^Tahmina|||||||||||||V1392518^^^visit number|
+ORC|XO|001JLQNTF^PCS|||SC|
+OBR||001JLQNTF^PCS||TACROMS^^Lab_MIDAS|||||||||||||||||||||I
+NTE|||Specimen Received IDM|
+>
+
+MSH|^~\&|LBM|SCM|LBM||20130314093535||ORU^R01|MIDAS_683826|P|2.3|
+PID|||V251178^^^PAS Number||PERSIAN^Arda|||||||||||||V1390937^^^visit number|
+ORC|XO|001JLQNNR^PCS|||SC|
+OBR||001JLQNNR^PCS||TACROMS^^Lab_MIDAS|||||||||||||||||||||I
+NTE|||Specimen Received IDM|
+>
+
+MSH|^~\&|LBM|SCM|LBM||20130314093434||ORU^R01|MIDAS_683825|P|2.3|
+PID|||P699217^^^PAS Number||BEGUM^Jasmin|||||||||||||V1383550^^^visit number|
+ORC|XO|001JLQMFW^PCS|||SC|
+OBR||001JLQMFW^PCS||TACROMS^^Lab_MIDAS|||||||||||||||||||||I
+NTE|||Specimen Received IDM|
+>
+
+MSH|^~\&|LBD|SCM|LBD||20130314092054||ORU^R01|DISH_683824|P|2.3|
+PID|||P570286^^^PAS Number||FAN^Pamela|||||||||||||V7565030^^^visit number|
+ORC|XO|001JLKVZQ^PCS|||CM|
+OBR||001JLKVZQ^PCS||hepmarker^^Lab_DISH|||||||||||||||||||||F
+OBX||TX|Hep_DeltaIgm^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_DeltaTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HDVRNA^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBcAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBcAbIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBeAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgCon^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVDRM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgG^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_IL-28B Genotype^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVDNA^^Lab_DISH||3.92E4  |IU/ml|||||F
+OBX||TX|Hep_HBeAg^^Lab_DISH||Nonreactive  ||||||F
+OBX||TX|Hep_HBsAg^^Lab_DISH||Reactive  ||||||F
+OBX||TX|Hep_Comments^^Lab_DISH||1 x 800uL aliquot stored. HBeAg Non-Reactive 0.240 S/CO (cut off 1.0 S/CO). Sample taken at 09:54.HBV DNA tested using Roche COBAS Ampliprep/TaqMan, assay threshold 20 IU/mL.||||||F
+
+MSH|^~\&|LBD|SCM|LBD||20130314092038||ORU^R01|DISH_683823|P|2.3|
+PID|||F613227^^^PAS Number||CUNNINGHAM^Michael|||||||||||||V7437366^^^visit number|
+ORC|XO|001JLKVVD^PCS|||CM|
+OBR||001JLKVVD^PCS||hepmarker^^Lab_DISH|||||||||||||||||||||F
+OBX||TX|Hep_DeltaIgm^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_DeltaTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HDVRNA^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBcAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBcAbIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgCon^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVDRM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgG^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_IL-28B Genotype^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVDNA^^Lab_DISH||NOT DETECTED  |IU/ml|||||F
+OBX||TX|Hep_HBsAg^^Lab_DISH||Reactive  ||||||F
+OBX||TX|Hep_HBeAg^^Lab_DISH||Nonreactive  ||||||F
+OBX||TX|Hep_HBeAb^^Lab_DISH||Reactive  ||||||F
+OBX||TX|Hep_Comments^^Lab_DISH||1 x 800uL aliquot stored. HBeAb Reactive 0.15 S/CO (cut off 1.0 S/CO). HBeAg Non-Reactive 0.488 S/CO (cut off 1.0 S/CO). Sample taken at 09:50.HBV DNA tested using Roche COBAS Ampliprep/TaqMan, assay threshold 20 IU/mL.||||||F
+
+MSH|^~\&|LBD|SCM|LBD||20130314091943||ORU^R01|DISH_683822|P|2.3|
+PID|||P724826^^^PAS Number||CROMWELL^Emmanuel|||||||||||||V7419856^^^visit number|
+ORC|XO|001JLJFMW^PCS|||CM|
+OBR||001JLJFMW^PCS||hepmarker^^Lab_DISH|||||||||||||||||||||F
+OBX||TX|Hep_DeltaIgm^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_DeltaTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HDVRNA^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBcAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBcAbIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBeAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBeAg^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAg^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgCon^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVDRM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgG^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_IL-28B Genotype^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVDNA^^Lab_DISH||4.68E1  |IU/ml|||||F
+OBX||TX|Hep_Comments^^Lab_DISH||Sample taken at 14:37. 1 x 800uL aliquot stored.HBV DNA tested using Roche COBAS Ampliprep/TaqMan, assay threshold 20 IU/mL.||||||F
+
+MSH|^~\&|LBD|SCM|LBD||20130314091918||ORU^R01|DISH_683821|P|2.3|
+PID|||P210282^^^PAS Number||NANA-AMPAW^Mavis|||||||||||||V7421136^^^visit number|
+ORC|XO|001JLJHBG^PCS|||CM|
+OBR||001JLJHBG^PCS||hepmarker^^Lab_DISH|||||||||||||||||||||F
+OBX||TX|Hep_DeltaIgm^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_DeltaTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HDVRNA^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBcAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBcAbIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBeAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBeAg^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAg^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgCon^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVDRM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgG^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_IL-28B Genotype^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVDNA^^Lab_DISH||Detected <20 IU/mL  |IU/ml|||||F
+OBX||TX|Hep_Comments^^Lab_DISH||1 x 800uL aliquot stored. HBV DNA tested using Roche Ampliprep/Taqman,. "Detected <20 IU/mL": HBV DNA Detected, but lower than the limit of quantification (20 IU/mL). Sample taken at 14:56.||||||F
+
+MSH|^~\&|LBD|SCM|LBD||20130314091831||ORU^R01|DISH_683820|P|2.3|
+PID|||P549505^^^PAS Number||KHAMRAKULOV^Khojiakbar|||||||||||||V7823017^^^visit number|
+ORC|XO|001JLHKNY^PCS|||CM|
+OBR||001JLHKNY^PCS||hepmarker^^Lab_DISH|||||||||||||||||||||F
+OBX||TX|Hep_DeltaIgm^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_DeltaTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HDVRNA^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBcAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBcAbIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgCon^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVDRM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgG^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_IL-28B Genotype^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVDNA^^Lab_DISH||4.72E3  |IU/ml|||||F
+OBX||TX|Hep_HBeAg^^Lab_DISH||Nonreactive  ||||||F
+OBX||TX|Hep_HBsAb^^Lab_DISH||Nonreactive  0.32|mIU/ml|||||F
+OBX||TX|Hep_HBeAb^^Lab_DISH||Reactive  ||||||F
+OBX||TX|Hep_HBsAg^^Lab_DISH||Reactive  ||||||F
+OBX||TX|Hep_Comments^^Lab_DISH||HBeAb Reactive 0.01 S/CO (cut off 1.0 S/CO). HBeAg Non-Reactive 0.175 S/CO (cut off 1.0 S/CO).HBV DNA tested using Roche COBAS Ampliprep/TaqMan, assay threshold 20 IU/mL.||||||F
+
+MSH|^~\&|LBD|SCM|LBD||20130314091749||ORU^R01|DISH_683819|P|2.3|
+PID|||V232352^^^PAS Number||MAYHEW^Mark|||||||||||||V7751032^^^visit number|
+ORC|XO|001JLHTHD^PCS|||CM|
+OBR||001JLHTHD^PCS||hepmarker^^Lab_DISH|||||||||||||||||||||F
+OBX||TX|Hep_DeltaIgm^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_DeltaTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HDVRNA^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBcAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgCon^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVDRM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgG^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_IL-28B Genotype^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F

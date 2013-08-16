@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features>
+	<feature name='rassyeyanie-core' version='${version}'>
+		<bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-dbcp/${dbcp.version}</bundle>
+		<feature version="${camel.version}">camel-mina</feature>
+		<feature version="${camel.version}">camel-cache</feature>
+		<feature version="${jpa-hibernate.version}">jpa-hibernate</feature>
+		<bundle>mvn:org.apache.camel/camel-hl7/2.12pre20130503</bundle>
+		<bundle>mvn:ca.uhn.hapi/hapi-osgi-base/${hapi.version}</bundle>
+		<bundle>mvn:uk.nhs.kch.rassyeyanie/rassyeyanie-framework/${version}</bundle>
+		<bundle>mvn:uk.nhs.kch.rassyeyanie/rassyeyanie-listeners/${version}</bundle>
+		<bundle>mvn:uk.nhs.kch.rassyeyanie/rassyeyanie-rules-common/${version}</bundle>
+		<bundle>mvn:uk.nhs.kch.rassyeyanie/rassyeyanie-services/${version}</bundle>
+	</feature>
+
+	<feature name='rassyeyanie-routes-apas' version='${version}'>
+		<feature version="${version}">rassyeyanie-core</feature>
+		<bundle>mvn:uk.nhs.kch.rassyeyanie/rassyeyanie-routes-apas/${version}</bundle>
+		<bundle>mvn:uk.nhs.kch.rassyeyanie/rassyeyanie-rules-apas/${version}</bundle>
+	</feature>
+
+	<feature name='rassyeyanie-routes-pims' version='${version}'>
+		<feature version="${version}">rassyeyanie-core</feature>
+		<bundle>mvn:uk.nhs.kch.rassyeyanie/rassyeyanie-rules-pims/${version}</bundle>
+		<bundle>mvn:uk.nhs.kch.rassyeyanie/rassyeyanie-routes-pims/${version}</bundle>
+	</feature>
+
+	<!-- LIVE -->
+	<feature name='rassyeyanie-live' version='${version}'>
+		<!-- A to D -->
+		<feature version='${version}'>rassyeyanie-routes-apas</feature>
+
+		<!-- E to H -->
+
+		<!-- ICM -->
+
+		<!-- I to N -->
+
+		<!-- P to R -->
+		<feature version="${version}">rassyeyanie-routes-pims</feature>
+
+		<!-- S to W -->
+
+	</feature>
+
+</features>
+
+

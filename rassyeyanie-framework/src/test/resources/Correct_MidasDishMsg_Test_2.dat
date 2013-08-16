@@ -1,0 +1,24 @@
+MSH|^~\&|LBD|SCM|LBD||20130314091749||ORU^R01|DISH_683819|P|2.3|
+PID|||V232352^^^PAS Number||MAYHEW^Mark|||||||||||||V7751032^^^visit number|
+ORC|XO|001JLHTHD^PCS|||CM|
+OBR||001JLHTHD^PCS||hepmarker^^Lab_DISH|||||||||||||||||||||F
+OBX||TX|Hep_DeltaIgm^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_DeltaTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HDVRNA^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVTotal^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HAVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBcAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgCon^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBsAgQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVDRM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HBVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVAb^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVGen^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HCVQuant^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgG^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_HEVIgM^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_IL-28B Genotype^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F
+OBX||TX|Hep_^^Lab_DISH||-  ||||||F

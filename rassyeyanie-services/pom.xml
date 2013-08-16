@@ -1,0 +1,245 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>uk.nhs.kch.rassyeyanie</groupId>
+		<artifactId>rassyeyanie</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>rassyeyanie-services</artifactId>
+	<packaging>bundle</packaging>
+
+	<dependencies>
+		<!-- Camel -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-core</artifactId>
+		</dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-mina</artifactId>
+        </dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-spring</artifactId>
+		</dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-jpa</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.mina</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-jms</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+		<dependency>
+		  <groupId>org.apache.camel</groupId>
+		  <artifactId>camel-test</artifactId>
+		  <scope>test</scope>
+		</dependency>
+		
+
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-camel</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-pool</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+        </dependency>
+        
+        
+		
+		<!-- HL7 API -->
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-osgi-base</artifactId>
+		</dependency>
+
+         <dependency>
+            <groupId>ca.uhn.hapi</groupId>
+            <artifactId>hapi-structures-v24</artifactId>
+        </dependency>
+
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <!-- Apache Commons -->
+	  	<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+
+        <!-- Testing -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+		</dependency>
+
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>com.springsource.org.hibernate</artifactId>
+            <scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>com.springsource.org.hibernate.ejb</artifactId>
+            <scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.servicemix.specs</groupId>
+			<artifactId>org.apache.servicemix.specs.java-persistence-api-1.1.1</artifactId>
+		</dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate.annotations</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+		<dependency>
+			<groupId>org.apache.servicemix.bundles</groupId>
+			<artifactId>org.apache.servicemix.bundles.commons-dbcp</artifactId>
+		</dependency>
+
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jta_1.1_spec</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+        <!-- Caching -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-cache</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>uk.nhs.kch.rassyeyanie</groupId>
+            <artifactId>rassyeyanie-framework</artifactId>
+            <type>bundle</type>
+        </dependency>
+	</dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Meta-Persistence>META-INF/persistence.xml</Meta-Persistence>
+                        <Bundle-SymbolicName>
+                            ${project.artifactId}
+                        </Bundle-SymbolicName>
+                        <Export-Package>
+                            uk.nhs.kch.rassyeyanie.*,
+                            org.postgresql.*,
+                            rassyeyanie.core
+                        </Export-Package>
+                        <Import-Package>
+                            *,
+                            org.apache.commons.dbcp,
+                            javassist.util.proxy,
+                            org.hibernate.proxy,
+                            javax.persistence,
+                            javax.persistence.spi,
+                            org.aopalliance.aop,
+                            org.springframework.aop,
+                            org.springframework.aop.framework,
+                            org.springframework.orm.jpa,
+                            org.springframework.orm.jpa.support,
+                            org.springframework.orm.jpa.vendor,
+                            org.springframework.beans.factory.config,
+                            org.springframework.beans.factory.annotation,
+                            org.springframework.beans.factory.xml,
+                            org.springframework.dao.support,
+                            org.xml.sax,
+                            org.osgi.framework,
+                            org.springframework.osgi.service.importer.support, 
+							org.springframework.beans.propertyeditors, 
+							org.springframework.osgi.service.exporter.support, 
+							org.springframework.osgi.service.exporter,
+                            ca.uhn.hl7v2, ca.uhn.hl7v2.validation.impl,
+                            uk.nhs.kch.rassyeyanie.*,
+                            org.postgresql.*
+                        </Import-Package>
+                        <Embed-Dependency>
+                            postgresql;scope=compile|runtime;inline=false
+                        </Embed-Dependency>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+	
+	</build>
+
+</project>

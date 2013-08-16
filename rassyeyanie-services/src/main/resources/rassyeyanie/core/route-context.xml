@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:osgi="http://www.springframework.org/schema/osgi" xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+                           http://www.springframework.org/schema/osgi-compendium http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                           http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<!-- Import transaction definitions from kch-fuse-framework bundle -->
+	<osgi:reference id="PROPAGATION_REQUIRED"
+		interface="org.apache.camel.spi.TransactedPolicy" />
+
+	<osgi:reference id="cacheService"
+		interface="uk.nhs.kch.rassyeyanie.framework.configuration.CacheService" />
+
+	<osgi:reference id="configurationService"
+		interface="uk.nhs.kch.rassyeyanie.framework.configuration.ConfigurationService" />
+
+    <osgi:reference id="activemq"
+        interface="org.apache.camel.Component" />
+        
+    <!-- Import HL7 beans from camel-hl7 bundle -->
+            <bean id="parser" class="ca.uhn.hl7v2.parser.PipeParser">
+                <constructor-arg>
+                    <bean class="ca.uhn.hl7v2.parser.CanonicalModelClassFactory">
+                        <constructor-arg type="java.lang.String"><value>2.4</value></constructor-arg>
+                    </bean>
+                </constructor-arg>
+                <property name="validationContext">
+                    <bean class="ca.uhn.hl7v2.validation.impl.NoValidation" />
+                </property>
+            </bean>
+                <bean id="hl7dataformat" class="org.apache.camel.component.hl7.HL7DataFormat">
+        <property name="parser">
+        <ref bean="parser" />
+        </property>
+    </bean>
+
+    <bean id="hl7codec"
+        class="org.apache.camel.component.hl7.HL7MLLPCodec">
+        <property name="charset"><value type="java.lang.String">ISO-8859-1</value></property>
+    </bean>
+        
+	<bean id="repositoryFactory"
+		class="uk.nhs.kch.rassyeyanie.framework.repository.RepositoryFactory" />
+
+	<bean class="uk.nhs.kch.rassyeyanie.framework.route.GenericSender" />
+
+    <bean class="uk.nhs.kch.rassyeyanie.framework.route.SenderResponseProcessor">
+        <property name="parser">
+            <ref bean="parser" />
+        </property>
+    </bean>
+    
+
+
+    
+	<!-- scan package for components -->
+	<context:component-scan base-package="uk.nhs.kch.rassyeyanie.*" />
+
+	<camelContext useMDCLogging="true"
+		xmlns="http://camel.apache.org/schema/spring">
+		<contextScan>
+			<includes>*SequentialTransformer</includes>
+		</contextScan>
+	</camelContext>
+</beans>

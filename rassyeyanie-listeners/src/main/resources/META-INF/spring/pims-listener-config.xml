@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/osgi-compendium
+       http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd">
+	<bean id="pimsListenerConfig"
+		class="uk.nhs.kch.rassyeyanie.framework.route.ListenerConfig"
+        p:acknowledgementProcessor-ref="generateRepsonse"
+        p:exceptionProcessor-ref="simpleExceptionProcessor">
+		<osgix:managed-properties persistent-id="uk.nhs.kch.rassyeyanie.listener.pims" />
+        <property name="icmAckCleaner">
+            <bean class="uk.nhs.kch.rassyeyanie.framework.processor.IpmBadHeaderFix" />
+        </property>
+	</bean>
+	
+</beans>

@@ -1,0 +1,153 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>uk.nhs.kch.rassyeyanie</groupId>
+		<artifactId>rassyeyanie</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>rassyeyanie-routes-pims</artifactId>
+	<packaging>bundle</packaging>
+
+	<dependencies>
+
+		<!-- KCH dependencies -->
+		<dependency>
+			<groupId>uk.nhs.kch.rassyeyanie</groupId>
+			<artifactId>rassyeyanie-framework</artifactId>
+			<type>bundle</type>
+		</dependency>
+
+        <dependency>
+            <groupId>uk.nhs.kch.rassyeyanie</groupId>
+            <artifactId>rassyeyanie-rules-common</artifactId>
+            <version>${project.version}</version>
+            <type>bundle</type>
+        </dependency>
+        
+
+        <dependency>
+            <groupId>uk.nhs.kch.rassyeyanie</groupId>
+            <artifactId>rassyeyanie-rules-pims</artifactId>
+            <version>${project.version}</version>
+            <type>bundle</type>
+        </dependency>
+
+        <dependency>
+            <groupId>uk.nhs.kch.rassyeyanie</groupId>
+            <artifactId>rassyeyanie-rules-pims</artifactId>
+            <version>${project.version}</version>
+            <type>bundle</type>
+        </dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-hl7</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
+	    <dependency>
+			<groupId>uk.nhs.kch.rassyeyanie</groupId>
+			<artifactId>rassyeyanie-testing-framework</artifactId>
+			<version>${project.version}</version>
+			<type>bundle</type>
+		</dependency>
+
+		<!-- Camel -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-spring</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jms</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-camel</artifactId>
+		</dependency>
+
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.osgi</groupId>
+			<artifactId>spring-osgi-core</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- HL7 API -->
+		<dependency>
+			<groupId>ca.uhn.hapi</groupId>
+			<artifactId>hapi-osgi-base</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>uk.nhs.kch.rassyeyanie</groupId>
+			<artifactId>rassyeyanie-testing-framework</artifactId>
+			<version>${project.version}</version>
+			<type>bundle</type>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+		</dependency>
+	</dependencies>
+
+    <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-SymbolicName>
+							${project.artifactId}
+						</Bundle-SymbolicName>
+
+						<Export-Package>
+							!org.apache.mina.filter.codec
+						</Export-Package>
+
+						<Import-Package>*,
+                            rassyeyanie.core, ca.uhn.hl7v2.parser, org.apache.camel.component.hl7, ca.uhn.hl7v2.validation.impl,
+                            org.apache.camel.component.jms, 
+                            org.apache.activemq.pool, 
+                            org.apache.camel, 
+                            org.springframework.jms.support.destination, 
+                            org.springframework.jms.core, 
+                            org.apache.activemq.camel.component, 
+                            uk.nhs.kch.rassyeyanie.framework.repository,
+                            org.apache.camel.spi,
+                            org.apache.mina.filter.codec,
+                            uk.nhs.kch.rassyeyanie.framework.configuration,
+                            uk.nhs.kch.rassyeyanie.rules.common.core.filters
+                         </Import-Package>
+
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+
+</project>

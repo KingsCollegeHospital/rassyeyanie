@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder
+        ignore-resource-not-found="true" system-properties-mode="OVERRIDE"
+        location="classpath:/test.properties" />
+
+    <bean id="properties"
+        class="org.apache.camel.component.properties.PropertiesComponent">
+        <property name="location" value="classpath:test.properties" />
+    </bean>
+
+    <bean id="generateResponse"
+        class="uk.nhs.kch.rassyeyanie.framework.route.GenerateResponse"></bean>
+    <bean id="simpleExceptionProcessor"
+        class="uk.nhs.kch.rassyeyanie.framework.route.SimpleExceptionProcessor"></bean>
+
+    <!-- Listener configuration -->
+    <bean id="testGenericListenerRoute"
+        class="uk.nhs.kch.rassyeyanie.framework.route.ListenerConfig">
+        <property name="endpoint"
+            value="mina:tcp://127.0.0.1:10112?sync=true&amp;codec=#hl7codec" />
+        <property name="autoStart" value="true" />
+        <property name="name" value="testGenericListenerRoute" />
+        <property name="exceptionProcessor" ref="simpleExceptionProcessor" />
+        <property name="acknowledgementProcessor" ref="generateResponse" />
+    </bean>
+
+    <bean id="testGenericListenerRouteInactive"
+        class="uk.nhs.kch.rassyeyanie.framework.route.ListenerConfig">
+        <property name="endpoint"
+            value="mina:tcp://127.0.0.1:10113?sync=true&amp;codec=#hl7codec" />
+        <property name="autoStart" value="false" />
+        <property name="name" value="testGenericListenerRouteInactive" />
+        <property name="exceptionProcessor" ref="simpleExceptionProcessor" />
+        <property name="acknowledgementProcessor" ref="generateResponse" />
+    </bean>
+    <!-- / -->
+
+    <!-- Cache Service -->
+    <bean id="cacheService"
+        class="uk.nhs.kch.rassyeyanie.framework.configuration.CacheServiceImpl" />
+
+
+    <bean id="genericListener"
+        class="uk.nhs.kch.rassyeyanie.framework.route.GenericListener">
+        <property name="queue" value="${genericListener.inboundQueue}" />
+        <property name="archiveFileLocation" value="target/archive" />
+        <property name="listeners">
+            <list>
+                <ref bean="testGenericListenerRoute" />
+                <ref bean="testGenericListenerRouteInactive" />
+            </list>
+        </property>
+    </bean>
+    <bean class="uk.nhs.kch.rassyeyanie.framework.route.SenderResponseProcessor">
+        <property name="parser">
+            <ref bean="parser" />
+        </property>
+    </bean>
+
+    <bean id="genericSender"
+        class="uk.nhs.kch.rassyeyanie.framework.route.GenericSender">
+        <property name="inboundQueue" value="${test.outboundQueue}" />
+        <property name="routeName" value="${test.senderRouteName}" />
+        <property name="receiverEndpoint" value="${test.endpoint}" />
+        <property name="errorQueue" value="${test.errorQueue}" />
+        <property name="archiveFileLocation" value="${test.archiveLocation}" />
+        
+    </bean>
+
+    <bean id="nullTransformer"
+        class="uk.nhs.kch.rassyeyanie.framework.processor.NullTransformer" />
+
+    <bean id="genericTransformer"
+        class="uk.nhs.kch.rassyeyanie.framework.route.GenericTransformRoute">
+        <property name="routeName" value="${test.transformerRouteName}" />
+        <property name="outboundQueue" value="${test.outboundQueue}" />
+        <property name="inboundQueue" value="${test.inboundQueue}" />
+        <property name="errorQueue" value="${test.errorQueue}" />
+        <property name="archiveFileLocation" value="${test.archiveLocation}" />
+        
+    </bean>
+
+    <bean id="jmsTransactionManager"
+        class="org.springframework.jms.connection.JmsTransactionManager">
+        <property name="connectionFactory" ref="connectionFactory" />
+    </bean>
+
+    <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="vm://localhost" />
+    </bean>
+
+    <bean id="PROPAGATION_REQUIRED" class="org.apache.camel.spring.spi.SpringTransactionPolicy">
+        <property name="transactionManager" ref="jmsTransactionManager" />
+    </bean>
+
+    <!-- JmsTemplate Definition -->
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <constructor-arg ref="connectionFactory" />
+    </bean>
+
+    <context:component-scan base-package="uk.nhs.kch.rassyeyanie.framework.util" />
+
+            <bean id="parser" class="ca.uhn.hl7v2.parser.PipeParser">
+                <constructor-arg>
+                    <bean class="ca.uhn.hl7v2.parser.CanonicalModelClassFactory">
+                        <constructor-arg type="java.lang.String"><value>2.4</value></constructor-arg>
+                    </bean>
+                </constructor-arg>
+                <property name="validationContext">
+                    <bean class="ca.uhn.hl7v2.validation.impl.NoValidation" />
+                </property>
+            </bean>
+                <bean id="hl7dataformat" class="org.apache.camel.component.hl7.HL7DataFormat">
+        <property name="parser">
+        <ref bean="parser" />
+        </property>
+    </bean>
+    
+    <bean id="hl7codec"
+        class="org.apache.camel.component.hl7.HL7MLLPCodec" />
+
+
+    <camelContext id="camelContext"
+        xmlns="http://camel.apache.org/schema/spring">
+        <routeBuilder ref="genericListener" />
+        <routeBuilder ref="genericSender" />
+        <routeBuilder ref="genericTransformer" />
+    </camelContext>
+
+</beans>

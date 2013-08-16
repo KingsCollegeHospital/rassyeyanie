@@ -1,0 +1,17 @@
+MSH|^~\&|I4|TQ|HL7-LAB||201301211205||ORM^O01|20130121120503056|P|2.3
+PID|1||F121737^^^306LORD^HOSP~4800965969^^^^NHSNO||MORRISON^NEVILLE||19630311|M|||Flat 8 Milner House^2 Taymount Rise^^London^SE23 3UU|||||||HXF121737^^^Visit Number
+PV1|1||306LORD||||||||||||||CHAWM|G|HXF121737^^^Visit Number||||||||||||||||||||||||201301211205
+ORC|NW|TQ0459645
+OBR|1|TQ0459645||MAL^Malaria||||||||||||CHAWM|||||||||||^^^20130121120452^^RT
+NTE|1|CD|Clinical Details:
+NTE|2|CD|retuned from Gambia 08/01/12- no m
+NTE|3|CD|alaria prophylaxis , fever with sh
+OBX|1|TX|MALQ1^Country Visited?||Gmabia||||||P
+OBX|2|TX|MALQ2^Date returned to UK||08/01/2013||||||P
+ORC|NW|TQ0459645
+OBR|2|TQ0459645||FBC^FBC||||||||||||CHAWM|||||||||||^^^20130121120452^^RT
+NTE|1|CD|Clinical Details:
+NTE|2|CD|retuned from Gambia 08/01/12- no m
+NTE|3|CD|alaria prophylaxis , fever with sh
+BLG|O|RS|^^^306LORD
+>

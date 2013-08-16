@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache name="applicationCache">
+<defaultCache name="default" eternal="false" maxBytesLocalHeap="512m" diskPersistent="false" />
+
+<diskStore path="java.io.tmpdir/fuse/" />
+
+<!-- Cached entries live forever -->
+<cache name="BLOCKED_PATIENT_CACHE" eternal="true"
+diskPersistent="true" maxElementsInMemory="1000" />
+</ehcache>
