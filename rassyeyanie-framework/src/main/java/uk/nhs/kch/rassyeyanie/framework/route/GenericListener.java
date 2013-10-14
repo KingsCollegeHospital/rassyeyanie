@@ -10,6 +10,7 @@ import org.apache.camel.ExchangePattern;
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.Processor;
 import org.apache.camel.Route;
+import org.apache.camel.builder.PredicateBuilder;
 import org.apache.camel.component.hl7.HL7Constants;
 import org.apache.camel.component.mina.MinaConstants;
 import org.apache.camel.model.ChoiceDefinition;
@@ -97,7 +98,16 @@ public class GenericListener
         route.unmarshal().custom("hl7dataformat");
         route
             .choice()
-            .when(this.body().contains("PID"))
+            .when(PredicateBuilder.in(
+            		this.header(HL7Constants.HL7_MESSAGE_TYPE).isEqualTo("ORM"),
+            		this.header(HL7Constants.HL7_MESSAGE_TYPE).isEqualTo("ORU"),
+            		this.header(HL7Constants.HL7_MESSAGE_TYPE).isEqualTo("ORG"),
+            		this.header(HL7Constants.HL7_MESSAGE_TYPE).isEqualTo("OMG"),
+                    PredicateBuilder.and(this.header(HL7Constants.HL7_MESSAGE_TYPE).isEqualTo("ADT"),
+                    		this.header(HL7Constants.HL7_TRIGGER_EVENT).isNotEqualTo("ACK"))
+
+            		)
+            		)
             .setHeader(
                 HL7AdditionalConstants.HL7_EXTERNAL_PATIENT_ID,
                 terser("/.PID-2"))
