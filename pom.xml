@@ -27,6 +27,21 @@
 		<url>scm:git|</url>
 	</scm>
 
+	<repositories>
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</releases>
+
+			<id>com.springsource.repository.bundles.release</id>
+			<name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
+			<url>https://maven.alfresco.com/nexus/content/groups/public/</url>
+      			<layout>default</layout>
+		</repository>
+	</repositories>
+
 	<properties>
 		<!-- Encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -422,7 +437,7 @@
 			<dependency>
 				<groupId>org.apache.servicemix.specs</groupId>
 				<artifactId>org.apache.servicemix.specs.java-persistence-api-1.1.1</artifactId>
-				<version>2.0.0.fuse-70-084</version>
+				<version>2.0.0</version>
 			</dependency>
 
 			<dependency>
